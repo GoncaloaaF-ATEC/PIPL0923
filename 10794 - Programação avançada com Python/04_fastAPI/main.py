@@ -12,6 +12,7 @@ usr = User(id=1, user_name="usrTeste", email="mail2@atec.pt")
 @app.get("/setup")
 async def setup():
     # cirar um user
+    # garantir que nao ha id duplicados
     usr = User(id=1, user_name="usrTeste", email="mail2@atec.pt")
     return {"msg": "a minha 1a api fastAPI"}
 

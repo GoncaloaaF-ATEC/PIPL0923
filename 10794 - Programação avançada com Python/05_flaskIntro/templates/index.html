@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %} Home Page {% endblock %}
+
+
+
+{% block conteudo %}
+
+    {% if nome %}
+        <h1>Olá, {{ nome }} </h1>
+    {% else %}
+
+        <h1>Olá, Anonimo </h1>
+
+    {% endif %}
+
+{% endblock %}
