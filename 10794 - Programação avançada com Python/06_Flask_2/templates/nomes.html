@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block titulo_head %} {{ titulo }} {% endblock %}
+
+
+{% block titulo %} {{ titulo }} {% endblock %}
+
+
+
+{% block conteudo %}
+
+    <ul>
+        {% for nome in nomes %}
+            <li> {{ nome }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

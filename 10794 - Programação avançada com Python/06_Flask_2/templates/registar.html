@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo_head %} {{ titulo }} {% endblock %}
+
+
+{% block titulo %} {{ titulo }} {% endblock %}
+
+
+
+{% block conteudo %}
+
+    <form method="POST" action="{{ url_for("proc_register") }}">
+
+        <input type="text" name="nome" placeholder="Nome"> <br/>
+        <input type="email" name="email" placeholder="Email"><br/>
+        <input type="number" name="media" min="0" max="20" placeholder="Media"><br/>
+        <BUTTON type="submit">Enviar</BUTTON>
+
+    </form>
+
+{% endblock %}

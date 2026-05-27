@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block titulo %} {{ titulo }} {% endblock %}
+
+{% block titulo_header %}{{ titulo }}{% endblock %}
+
+{% block conteudo %}
+
+    <h2> {{ post.title }} </h2>
+    <p> {{ post.body }} </p>
+    <p> Autor: <a href="{{ url_for("user_info", id= user_id) }}"> {{ user }}  </a></p>
+
+    <hr/>
+    <h2> Comentários </h2>
+
+    {% for cmt in comments %}
+        <div>
+            <p style="font-weight: bold; font-size: 20px "> {{ cmt.name }} </p>
+            <p> {{ cmt.body }} </p>
+        </div>
+        <hr/>
+
+    {% endfor %}
+
+
+
+{% endblock %}
